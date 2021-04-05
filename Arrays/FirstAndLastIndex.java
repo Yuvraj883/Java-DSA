@@ -44,7 +44,7 @@ public class FirstAndLastIndex{
         }
         System.out.println(fi); 
         System.out.println(li);
-
+        scn.close();
 
     }
 }
