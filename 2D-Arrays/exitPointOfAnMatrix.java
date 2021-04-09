@@ -51,7 +51,7 @@ public class exitPointOfAnMatrix{
         }
         System.out.println(i);
         System.out.println(j);
-
+        scn.close();
 
     }
 }
