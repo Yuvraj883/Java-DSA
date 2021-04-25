@@ -1,4 +1,5 @@
-#include <iostream> 
+#include <iostream>
+#include <bits/stdc++.h> 
 using namespace std; 
 int main(){
     int n; 
@@ -14,6 +15,7 @@ int main(){
     int t=n/k; 
     int count =0;
     int temp =0;
+    sort(arr,arr+n);
     for (int i=1; i<n; i++){
         if (arr[i]==arr[i-1]){
             count++;
