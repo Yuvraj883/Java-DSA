@@ -7,7 +7,9 @@ public class LinearPower{
         }
         else{
          //x *=y; 
-           return x* toThePower(x, n-1); 
+         int xtnm1 = toThePower(x, n-1); //x to the power n minus 1 
+         int xn = xtnm1 *x; 
+           return xn; 
            
         }
     }
