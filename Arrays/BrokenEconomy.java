@@ -10,7 +10,9 @@ public class BrokenEconomy{
         int d = scn.nextInt();
 
         int low = 0; 
-        int high = arr.length -1; 
+        int high = arr.length -1;
+        scn.close();
+
         while (low<=high){
             int mid = (low+ high)/2; 
             if (arr[mid]>d){
@@ -21,7 +23,6 @@ public class BrokenEconomy{
             }
             else{
                 System.out.println(arr[mid]);
-                scn.close();
                 return ;
             }
         }

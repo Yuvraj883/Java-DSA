@@ -5,6 +5,7 @@ public class RemovePrime{
             if (val%i==0){
                 return false;
             }
+
         }
 
         return true; 

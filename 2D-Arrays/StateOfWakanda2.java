@@ -3,7 +3,7 @@ import java.util.*;
 public class StateOfWakanda2 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
+        int n = scn.nextInt();//sides of the square matrix
     
         int[][] arr = new int[n][n];
         for (int i = 0; i < arr.length; i++) {
