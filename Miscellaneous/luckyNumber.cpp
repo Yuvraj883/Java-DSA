@@ -22,8 +22,13 @@ int main()
         }
         else if (arr[i] != arr[i - 1] && count > 1)
         {
-            lucky.push_back(arr[i]);
+            if(arr[i-1]==count){
+            lucky.push_back(arr[i-1]);
             count = 0;
+            }
+            else{ 
+                count =0;
+            }
         }
     }
     if (lucky.size() == 0)
