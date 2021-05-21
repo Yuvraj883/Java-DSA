@@ -31,6 +31,9 @@ int main()
             }
         }
     }
+    if(count>1){
+        lucky.push_back(arr[n-1]);
+    }
     if (lucky.size() == 0)
     {
         cout << "-1" << endl;
