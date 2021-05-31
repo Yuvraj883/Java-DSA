@@ -21,7 +21,7 @@ public class RatInAMaze {
             return;
         }
 
-        if (row < 0 || col < 0 || row >= n || col >= n || maze[row][col] == 1|| visited[row][col] == true) {
+        if (row < 0 || col < 0 || row >= n || col >= n || maze[row][col] == 0|| visited[row][col] == true) {
             return;
         }
         visited[row][col] = true;
