@@ -5,6 +5,7 @@ public class FibonacciTabulation{
         int n = scn.nextInt(); 
       int ans =  fibonacci(n);
       System.out.println(ans);
+      scn.close();
     }
     public static int fibonacci(int n){
         int [] tab = new int [n+1];
