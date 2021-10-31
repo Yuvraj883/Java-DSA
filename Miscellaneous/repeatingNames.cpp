@@ -35,7 +35,10 @@ int main()
         }
 
     }
-    if(rep== false){
+    // if (count>1){
+    //     cout<<count<<" "<<vec[vec.size()-1]; 
+    // }
+    if(rep==false){
         cout<<"-1"<<endl;
     }
    return 0;
