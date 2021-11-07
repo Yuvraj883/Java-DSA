@@ -6,7 +6,7 @@ class Super1{
         System.out.println("Super Class Disp"); 
     }
 }
-class Sub1 extends Super{
+class Sub1 extends Super1{
     public void Sub1 (){
         System.out.println("Derived Class");
     }
