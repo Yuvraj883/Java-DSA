@@ -1,11 +1,16 @@
-#include <stdio> 
+#include <stdio.h>
+#include<stdlib.h> 
 struct Node{
     int data ;
     struct Node* next; 
-}
-
+};
+//Function for traversing the linkedList. 
 void printList(struct Node* n){
 
+    while (n!=NULL){
+        printf("%d ",n->data ); 
+        n = n->next; 
+    }
 }
 
 int main(){
@@ -26,7 +31,7 @@ int main(){
     third-> data = 3; 
     head-> next = NULL; 
 
-
+    printList(head);
 
 
     return 0; 
