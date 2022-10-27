@@ -26,10 +26,10 @@ int main(){
     head->next = second; 
 
     second->data = 2; 
-    head->next = third; 
+    second->next = third; 
 
     third-> data = 3; 
-    head-> next = NULL; 
+    third-> next = NULL; 
 
     printList(head);
 
