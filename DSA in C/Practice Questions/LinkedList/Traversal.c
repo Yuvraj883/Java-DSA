@@ -1,7 +1,11 @@
 #include <stdio> 
 struct Node{
-    int data 
+    int data ;
     struct Node* next; 
+}
+
+void printList(struct Node* n){
+
 }
 
 int main(){
@@ -9,14 +13,12 @@ int main(){
     struct Node* second = NULL; 
     struct Node* third = NULL; 
 
-//Memory allocation in the heap for the three variables.
     head = (struct Node*)malloc(sizeof(struct Node));
     second = (struct Node*)malloc(sizeof(struct Node)); 
     third = (struct Node*)malloc(sizeof(struct Node)); 
 
-//Assigning values to the variables. 
-    head->data= 1; //Assigning data to the head node
-    head->next = second; // Linking the head node to the second node
+    head->data= 1; 
+    head->next = second; 
 
     second->data = 2; 
     head->next = third; 
