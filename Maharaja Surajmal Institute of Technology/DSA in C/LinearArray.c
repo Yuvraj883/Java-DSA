@@ -9,7 +9,7 @@ int main(){
     int arr[n]; 
     printf("Enter array elements: ");
     for (int i=0; i<n; i++){
-        scanf("%d ",&arr[i]); 
+        scanf("%d",&arr[i]); 
     }
 
     for(int i=0; i<n; i++){
