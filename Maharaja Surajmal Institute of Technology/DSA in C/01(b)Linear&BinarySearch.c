@@ -1,4 +1,5 @@
 #include <stdio.h> 
+#include <stdlib.h> 
 
 void linearSearch(int arr[],int n, int key){
     int isPresent=0; 
@@ -40,6 +41,12 @@ void binarySearch(int arr[], int n, int key){
      }
 
 }
+int compareInt(const void *ptr1, const void* ptr2){
+    const int* p1 = ptr1; 
+    const int* p2 = ptr2; 
+
+    return *p1-*p2; 
+}
 
 
 int main(){
@@ -56,8 +63,11 @@ int main(){
     printf("Enter the number you want to search in the array: "); 
     scanf("%d", &key); 
 
-
+    
+    printf("\n"); 
     linearSearch(arr, n, key); 
+    qsort(arr, n, sizeof(int), compareInt); //SORTING THE ARRAY BEFORE PERFORMING BINARY SEARCH
+
     binarySearch(arr, n, key); 
     return 0; 
 
