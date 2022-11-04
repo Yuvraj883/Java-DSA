@@ -66,7 +66,7 @@ int main(){
     
     printf("\n"); 
     linearSearch(arr, n, key); 
-    qsort(arr, n, sizeof(int), compareInt); //SORTING THE ARRAY BEFORE PERFORMING BINARY SEARCH
+    qsort(arr, n, sizeof(int), compareInt); //SORTING THE ARRAY BEFORE PERFORMING BINARY SEARCH.
 
     binarySearch(arr, n, key); 
     return 0; 
