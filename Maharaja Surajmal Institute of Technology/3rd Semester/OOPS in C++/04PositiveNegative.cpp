@@ -10,7 +10,7 @@ int main(){
         cout<<num<<" is a positive integer."; 
     }
     else{
-        cout<<num<<" is a negative integer."; 
+        cout<<num<<" is a negative integer. "; 
     }
     return 0; 
 }
