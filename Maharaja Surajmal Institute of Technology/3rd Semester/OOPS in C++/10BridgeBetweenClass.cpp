@@ -1,26 +1,32 @@
 #include<iostream>
 using namespace std;
 
-class Name{
-    string fname, lname; 
+class LName; 
+class FName{
+    string fname; 
     public: 
-    Name(string firstName, string lastName){
+    FName(string firstName){
         fname = firstName; 
-        lname = lastName;
+       
     }
-    friend void printName(Name &name);
+    friend void printName(FName fn, LName ln);
 };
 
-class PrintName{
+class LName{
+    string lname; 
     public: 
-    void printName(Name &name){
-        string fullName = name.fname+name.lname;
-      cout<<fullName;    
+    LName(string ln){
+        lname = ln; 
     }
-}; 
+    friend void printName(FName fn,LName ln); 
+};
+
+void printName(FName fn, LName ln){
+    cout<<fn.fname<<" "<<ln.lname; 
+}
 
 int main(){
-    Name name("Yuvraj","Singh"); 
-    PrintName obj;
-    obj.printName(name);
+   FName fn("Yuvraj"); 
+   LName ln("Singh"); 
+   printName(fn, ln);
 }
