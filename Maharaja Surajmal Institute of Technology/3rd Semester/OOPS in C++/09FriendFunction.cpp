@@ -1,36 +1,32 @@
-#include <iostream> 
-using namespace std; 
+#include<iostream>
+using namespace std;
+class LName; 
 
-class Student{
-    string name =""; 
+class fName{
+    string fname=""; 
     public: 
-    Student(){
-        name="Yuvraj";
+    fName(string firstName){
+        fname = firstName; 
+      
     }
-    
-   void displayName(){
-        cout<<name; 
-    }
-    //Friend function prototype.
-    friend void updateName(Student &s1);
+    friend  void printName(fName fn, LName ln);
 };
-//Friend function declaration. 
-void updateName(Student &s1){
-    s1.name=s1.name+" Singh";
+
+class LName{
+    string lname;
+    public:
+    LName( string lastName){
+          lname = lastName;
+    }
+    friend void printName(fName fn, LName ln);
+   
+}; 
+void printName(fName fn, LName ln){
+    cout<<fn.fname<<" "<<ln.lname; 
 }
-
 int main(){
-    Student s1; 
-    
-    cout<<"Name before friend function is called: ";
-    s1.displayName(); 
-    cout<<endl;
-
-    cout<<"Name after the frined function is called: ";
-    //Friend function call.
-    updateName(s1);
-
-    s1.displayName();
-    cout<<endl;
-    return 0;     
+    fName fn("Yuvraj"); 
+    LName ln("Singh");
+   
+    printName(fn,ln);
 }

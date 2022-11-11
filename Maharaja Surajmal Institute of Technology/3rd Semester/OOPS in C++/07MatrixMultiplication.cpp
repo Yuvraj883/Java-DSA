@@ -66,15 +66,21 @@ if(rows1!=cols2){
 int product[10][10]; 
 for(int i=0; i<rows1; i++){
     for(int j=0; j<cols2; j++){
+        product[i][j]=0;
+    }
+    // cout<<endl;
+}
+for(int i=0; i<rows1; i++){
+    for(int j=0; j<cols2; j++){
         for(int k=0; k<cols2; k++){
-            product[i][j]+= arr[j][k]*arr2[k][j];
+            product[i][j] += (arr[i][k])*(arr2[k][j]);
         }
     }
 }
 
 for(int i=0; i<rows1; i++){
     for(int j=0; j<cols2; j++){
-        cout<<product[i][j];
+        cout<<product[i][j]<<" ";
     }
     cout<<endl;
 }
