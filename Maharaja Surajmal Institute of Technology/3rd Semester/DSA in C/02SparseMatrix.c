@@ -33,8 +33,8 @@ int main(){
     }
     int compact[3][size];
     int k=0;
-    for(int i=0; i<3; i++){
-        for(int j=0; j<size; j++,k++){
+    for(int i=0; i<row; i++){
+        for(int j=0; j<col; j++){
             if(arr[i][j]!=0){
                 compact[0][k] = i; 
                 compact[1][k] = j;
@@ -43,12 +43,12 @@ int main(){
             }
         }
     }
-      for(int i=0; i<row; i++){
-            for(int j=0; j<col; j++){
-                printf("%d ",arr[i][j]); 
-            }
-            printf("\n"); 
-        }
+    //   for(int i=0; i<row; i++){
+    //         for(int j=0; j<col; j++){
+    //             printf("%d ",arr[i][j]); 
+    //         }
+    //         printf("\n"); 
+    //     }
 
 
     if(isSparse){
