@@ -1,4 +1,5 @@
 #include <stdio.h> 
+#include <stdlib.h> 
 struct Node{
     int data; 
     struct Node* next; 
@@ -18,6 +19,7 @@ Node* reverseList(&head){
         prev = curr; 
         curr = next; 
     }
+    return prev; 
 }
 
 void printList(Node* n){
@@ -49,7 +51,8 @@ int main(){
     printList(head); 
     printf("\n List after reversal: "); 
     reverseList(head); 
-    printList(head); 
+    printList(head);
+    struct Node* new_node = reverseList(head);  
     
     return 0;
 
