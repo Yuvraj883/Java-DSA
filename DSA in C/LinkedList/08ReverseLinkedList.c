@@ -4,13 +4,13 @@ struct Node{
     int data; 
     struct Node* next; 
 };
-Node* reverseList(Node* &head);
-printList(Node* head);
+static void reverseList(struct Node** head);
+void printList(struct Node* n);
 
-Node* reverseList(&head){
-    Node* curr = head; 
-    Node* prev = NULL; 
-    Node* next; 
+static void reverseList(struct Node** head){
+   struct Node* curr = *head; 
+    struct Node* prev = NULL; 
+    struct Node* next; 
 
     while(curr!=NULL){
         next = curr->next; 
@@ -19,10 +19,11 @@ Node* reverseList(&head){
         prev = curr; 
         curr = next; 
     }
-    return prev; 
+    *head = prev; 
 }
 
-void printList(Node* n){
+void printList(struct Node* head){
+    struct Node* n = head; 
     while(n!=NULL){
         printf("%d ",n->data); 
         n = n->next; 
@@ -50,9 +51,9 @@ int main(){
     printf("List before reversal: "); 
     printList(head); 
     printf("\n List after reversal: "); 
-    reverseList(head); 
+    reverseList(&head); 
     printList(head);
-    struct Node* new_node = reverseList(head);  
+    // struct Node* new_node = reverseList(head);  
     
     return 0;
 
