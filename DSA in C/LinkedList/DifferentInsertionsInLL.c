@@ -6,6 +6,7 @@
       int data; 
       struct Node* next; 
  };
+ //Insertion at the beginning of the list. 
  void push(struct Node** head){
     
      struct Node* temp=NULL; 
@@ -22,6 +23,7 @@
      }
     //   printf("%lu", sizeof(temp));
  }
+ //Insertion after a given node.
  void insertAfter(struct Node* prev){
      if(prev == NULL){
          printf("Previous Node can't be NULL"); 
@@ -34,6 +36,7 @@
      prev->next = temp; 
      
  }
+ //Insertion at the end.
  void append(struct Node** head){
      struct Node* temp = NULL; 
      temp = (struct Node*)malloc(sizeof(struct Node)); 
