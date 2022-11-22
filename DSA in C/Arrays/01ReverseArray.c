@@ -1,5 +1,10 @@
 #include <stdio.h> 
 
+void printArray(int arr[], int n){
+     for(int i=0; i<n; i++){
+        printf("%d ", arr[i]); 
+    }
+}
 int reverseArray(int arr[], int n){
     for(int i =0; i<n/2; i++){
         int temp = arr[i]; 
@@ -8,10 +13,10 @@ int reverseArray(int arr[], int n){
     }
 
      printf("Reversed Array: "); 
-    for(int i=0; i<n; i++){
-        printf("%d ", arr[i]); 
-    }
+     printArray(arr,n);
+
 }
+
 
 int main(){
     int n; 
@@ -25,9 +30,7 @@ int main(){
     } 
     
     printf("Array: "); 
-    for(int i=0; i<n; i++){
-        printf("%d ", arr[i]); 
-    }
+    printArray(arr,n); 
     printf("\n"); 
     reverseArray(arr, n); 
 
