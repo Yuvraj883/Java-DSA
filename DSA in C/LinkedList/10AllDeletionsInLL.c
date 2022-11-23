@@ -96,7 +96,6 @@ void printList(struct Node* n){
 }
 
 int main(){
-    // struct Node* head = NULL;
      struct Node* head = NULL; 
     struct Node* second = NULL; 
     struct Node* third = NULL; 
