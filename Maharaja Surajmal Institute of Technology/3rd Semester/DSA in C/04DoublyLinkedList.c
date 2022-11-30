@@ -22,7 +22,7 @@ void push(struct Employee** head){
         printf("Enter the employee id and name: "); 
        
         scanf("%d",&e->id); 
-        scanf("%s",&e->name); 
+        scanf("%s",e->name); 
         e->prev = NULL; 
         e->next = *head; 
 
@@ -40,19 +40,19 @@ void deleteLastNode(struct Employee *head){
     }
     while(n->next!=NULL){
         n = n->next; 
-           printf("%d %s", n->id, n->name); 
+        //   printf("%d %s", n->id, n->name); 
     }
     // struct Employee* prev = n; 
     // prev->next = NULL; 
     n->prev->next = NULL; 
-    printf("%d %s", n->id, n->name); 
+    // printf("%d %s", n->prev->id, n->prev->name); 
 }
 
 void printList(struct Employee* n){
     int i=0;
 while(n->next!=NULL){    
     i++; 
-    printf("%d ",i);
+    // printf("%d ",i);
     printf("%d %s \n",n->id,n->name); 
     n=n->next; 
 
@@ -68,6 +68,7 @@ int main(){
     
     printList(head); 
     deleteLastNode(head);
+    printf("\nList after deletion: \n");
     printList(head); 
 
 }
