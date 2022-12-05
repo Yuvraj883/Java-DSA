@@ -6,7 +6,7 @@ struct Stack{
     struct Stack* next; 
 }; 
 
-void push (struct Stack** head){
+void push (struct Stack** top){
     struct Stack* temp = (struct Stack*)malloc(sizeof(struct Stack)); 
     if(temp==NULL){
         //There's is no space left in the memory itself.
@@ -17,72 +17,77 @@ void push (struct Stack** head){
     printf("\nEnter the value you want to insert to the stack: "); 
     scanf("%d",&temp->data); 
     }
-    if(*head ==NULL){
+    if(*top ==NULL){
         temp->next = NULL; 
-        *head = temp; 
+        *top = temp; 
     }
     else{
-          temp->next = *head; 
-         *head = temp; 
+          temp->next = *top; 
+         *top = temp; 
     }
 }
 
-void pop(struct Stack **head){
-    if(*head==NULL){
-        printf("\nStack Underflow!!\n"); 
-        return; 
-    }
+void pop(struct Stack **top){
+  struct Stack* temp = (struct Stack*)malloc(sizeof(struct Stack));
 
-    struct Stack* temp=*head;
-   
-    temp = temp->next;
-    *head = temp; 
-    free(temp); 
+ if(*top == NULL){
+    printf("Stack underflow!!"); 
+ }
 
-  
+  temp = *top; 
+  *top = temp->next; 
+  free(temp); 
+
 }
 
-void peek(struct Stack* head){
-    printf("\nThe value at the top is %d", head->data); 
+void peek(struct Stack* top){
+    printf("\nThe value at the top is %d", top->data); 
 }
 
 void printStack(struct Stack* n){
     printf("\nStack: "); 
-    if(n==NULL){
+    if(n->next==NULL){
         printf("Stack is empty!"); 
     }
     else{
-    while(n!=NULL){
-        // if(n->data==0){
-        //     n=n->next;
-        // }
-        // else{
-        // printf("%d ",n->data); 
-        // n = n->next;
-        // }
+    while(n->next!=NULL){
+      
          printf("%d ",n->data); 
         n = n->next;
     }
+    printf("\n"); 
     }
 }
 
 int main(){
-    struct Stack* head=NULL; 
-    head = (struct Stack*)malloc(sizeof(struct Stack)); 
+    struct Stack* top=NULL; 
+    top = (struct Stack*)malloc(sizeof(struct Stack)); 
     // printStack(head); 
-
-    push(&head); 
-    push(&head); 
-
-    push(&head); 
-    push(&head); 
-    push(&head); 
-
-
-    push(&head); 
-    // peek(head); 
-    printStack(head); 
-    pop(&head); 
-    printStack(head); 
+    
+    // int choice; 
+    // while(1){
+    //     printf("Follwing are the operations that can be performed on the Stack. \n 0.Exit \n 1.Push \n 2.Pop \n 3.Peek \n 4.Print\n");
+    //     printf("Enter your choice: "); 
+    //     scanf("%d",&choice); 
+    //     switch(choice){
+    //         case 0: exit(0); 
+    //         break; 
+    //         case 1: push(&top); 
+    //         break; 
+    //         case 2: pop(&top); 
+    //         break;
+    //         case 3: peek(top); 
+    //         break; 
+    //         case 4: printStack(top); 
+    //         break;
+    //     }
+    // }
+    // pop(&top); 
+    push(&top); 
+    push(&top); 
+    push(&top); 
+    pop(&top); 
+   
+    printStack(top); 
 
 }
