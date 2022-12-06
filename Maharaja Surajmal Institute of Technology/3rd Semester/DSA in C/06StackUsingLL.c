@@ -28,7 +28,7 @@ void push (struct Stack** top){
 }
 
 void pop(struct Stack **top){
-  struct Stack* temp = (struct Stack*)malloc(sizeof(struct Stack));
+  struct Stack* temp;
 
  if(*top == NULL){
     printf("Stack underflow!!"); 
