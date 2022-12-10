@@ -14,7 +14,7 @@ int main(){
     }
 
     int r2,c2; 
-    cout<<"Enter the number of rows and cols in the matrix2:  "; 
+    cout<<"Enter the number of rows and cols in the matrix2: "; 
     cin>>r2>>c2;
     int b[r2][c2]; 
     cout<<"Enter the elements of the matrix2: "; 
