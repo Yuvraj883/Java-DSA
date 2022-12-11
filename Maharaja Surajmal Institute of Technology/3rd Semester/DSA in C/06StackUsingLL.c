@@ -43,7 +43,7 @@ void peek(struct Node* top){
 
 void printStack(struct Node* n){
     if(n==NULL){
-        printf("Stack underflow!!\n");
+        printf("Stack underflow!! \n");
         return;
     }
     printf("Stack: ");
