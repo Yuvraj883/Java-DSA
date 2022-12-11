@@ -7,16 +7,17 @@ struct Node{
 }; 
 
 void push(struct Node** top){
-    struct Node* el = (struct Node*)malloc(sizeof(struct Node)); 
+    struct Node* temp = (struct Node*)malloc(sizeof(struct Node)); 
     printf("Enter the value you want to insert: "); 
-    scanf("%d",&el->data); 
+    scanf("%d",&temp->data); 
+    printf("%d added to the stack.\n", temp->data); 
     if(top==NULL){
-        el->next = NULL; 
-        *top = el; 
+        temp->next = NULL; 
+        *top = temp; 
     }
     else{
-        el->next=*top; 
-        *top= el; 
+        temp->next=*top; 
+        *top= temp; 
     }
     
 }
@@ -25,6 +26,8 @@ void pop(struct Node** top){
     struct Node* temp = NULL; 
     temp = *top; 
     *top = temp->next; 
+    printf("%d removed from the stack.\n", temp->data); 
+
     free(temp); 
 
 }
@@ -43,6 +46,7 @@ void printStack(struct Node* n){
         printf("Stack underflow!!\n");
         return;
     }
+    printf("Stack: ");
     while(n!=NULL){
         if(n->data != 0){
         printf("%d ", n->data);
