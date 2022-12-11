@@ -18,7 +18,7 @@ void addMatrix(int r1, int c1, int arr1[][c1], int r2, int c2, int arr2[][c2]){
             sum[i][j]=arr1[i][j]+arr2[i][j]; 
         }
     }
-    printf("\n Following is the sum of two matrices: "); 
+    printf("\nFollowing is the sum of two matrices: \n"); 
     printMatrix(r1,c1,sum); 
 }
 
