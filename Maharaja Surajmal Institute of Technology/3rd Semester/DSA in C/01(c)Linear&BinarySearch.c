@@ -18,11 +18,11 @@ void linearSearch(int arr[],int n, int key){
 
 void binarySearch(int arr[], int n, int key){
     int low = 0; 
-    int high = n-1; 
-    int mid = (low+high)/2; 
+    int high = n; 
+    int mid = (low+high-1)/2; 
     int isPresent = 0; 
 
-    while(low<high && isPresent ==0){
+    while(low<=high && isPresent ==0){
         if(arr[mid]==key){
             printf("Number found in the array on index %d through Binary Search.\n",mid);
             isPresent=1;  
