@@ -43,7 +43,7 @@ for(int i=0; i<r1; i++){
         }
     }
 }
-
+cout<<"Product of the two matrices is: "<<endl;
 for(int i=0; i<r1;i++ ){
     for(int j=0; j<c2; j++){
         cout<<c[i][j]<<" "; 
