@@ -8,7 +8,7 @@ struct Node{
 
    struct Node* front = NULL; 
    struct Node* rear = NULL; 
-  
+//Insertion  
 void enqueue(struct Node** head){
     struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
     printf("Enter the value you want to add to the queue: "); 
@@ -31,7 +31,7 @@ void enqueue(struct Node** head){
         last->next = temp; 
     }
 }
-
+//Deletion
 void dequeue(struct Node** head){
     struct Node* temp = *head ; 
     *head = temp->next; 
