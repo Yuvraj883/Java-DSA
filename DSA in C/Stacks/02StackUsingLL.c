@@ -30,9 +30,10 @@ void pop(struct Stack** top){
         return;
     }
     struct Stack* temp = *top; 
+    printf("%d popped from the stack!!\n",(*top)->data);
+
     temp = temp->next; 
     *top = temp; 
-    printf("%d popped from the memory!!\n");
     // free(temp);
 }
 
@@ -59,8 +60,9 @@ void printStack(struct Stack* n){
 void main(){
     struct Stack* top = NULL; 
     int choice; 
+     printf("The operations supported by the stack:\n 1.Push \n 2.Pop \n 3.Peek \n 4.Print \n 5.Exit\n");
+
     while(1){
-        printf("The operations supported by the stack:\n 1.Push \n 2.Pop \n 3.Peek \n 4. Print \n 5.Exit\n");
         printf("Enter your choice: "); 
         scanf("%d",&choice); 
         switch(choice){
@@ -75,7 +77,7 @@ void main(){
             case 5: exit(0); 
             break; 
             default: 
-            printf("Invalid Input."); 
+            printf("Invalid Input.\n"); 
         }
         
     }
