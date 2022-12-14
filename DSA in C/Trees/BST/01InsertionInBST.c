@@ -6,23 +6,24 @@ struct Node{
     struct Node* left, *right; 
 }; 
 
-void insert(struct Node** root){
+struct Node* insert(struct Node* root){
     struct Node* temp = (struct Node*)malloc(sizeof(struct Node)); 
     printf("Enter the value you want to add to the BST: "); 
     scanf("%d",&temp->data);
   
     temp->left = NULL; 
     temp->right = NULL; 
-     struct Node* parent = *root; 
-    if(*root == NULL){
-        *root = temp; 
+     struct Node* parent = root; 
+    if(root == NULL){
+        root = temp; 
         parent = temp;
         printf("%d added to the tree as the root element.\n",parent->data); 
+        
     }
     else{
         struct Node*  curr; 
        
-        curr = *root; 
+        curr = root; 
         while(curr){
             parent = curr; 
             if(curr->data > temp->data){
@@ -42,24 +43,21 @@ void insert(struct Node** root){
         }
        
         
-        free(temp); 
+      
     }
+    //  free(temp); 
+        return root; 
 }
-void inorderTraversal(struct Node* n){
-    if(n==NULL){
-        return; 
-    }
-    
-    inorderTraversal(n->left); 
-    printf("%d ", n->data); 
-    inorderTraversal(n->right); 
-    
-}
+
 
 int main(){
     struct Node* root = NULL; 
-    insert(&root); 
-    insert(&root); 
+   root =  insert(root); 
+    root =  insert(root); 
+    root =  insert(root); 
+    // insert(&root); 
+    // insert(&root); 
+
     // insert(&root);
     // insert(&root); 
     // insert(&root); 
