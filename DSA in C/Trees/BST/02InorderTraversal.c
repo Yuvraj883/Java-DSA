@@ -61,7 +61,7 @@ void inorderTraversal(struct Node* n){
 
 int main(){
     struct Node* root = NULL; 
-   root =  insert(root); 
+    root =  insert(root); 
     root =  insert(root); 
     root =  insert(root); 
     // insert(&root); 
