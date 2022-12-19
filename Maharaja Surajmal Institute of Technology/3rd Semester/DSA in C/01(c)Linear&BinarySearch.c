@@ -23,17 +23,17 @@ void binarySearch(int arr[], int n, int key){
     int isPresent = 0; 
 
     while(low<=high && isPresent ==0){
+            mid = (low+high-1)/2; 
+
         if(arr[mid]==key){
             printf("Number found in the array on index %d through Binary Search.\n",mid);
             isPresent=1;  
         }
-        else if(arr[mid]>key){
-            high = mid-1; 
-            mid = (low+high)/2; 
-        }
         else if(arr[mid]<key){
             low = mid+1; 
-            mid = (low+high)/2; 
+        }
+        else if(arr[mid]<key){
+            high = mid-1; 
         }
     }
      if(!isPresent){
