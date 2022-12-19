@@ -50,6 +50,7 @@ void postOrderTraversal(struct Node* n){
 
 int main(){
 struct Node* root = NULL;
+
 insert(&root); 
 insert(&root);
 insert(&root);
