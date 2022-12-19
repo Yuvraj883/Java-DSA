@@ -41,8 +41,8 @@ struct Node* insert(struct Node* root){
 
 void preorderTraversal(struct Node* n){
     if(n!=NULL){
-        // printf("Tree: ");
-           printf("%d ", n->data); 
+        
+    printf("%d ", n->data); 
     preorderTraversal(n->left); 
     preorderTraversal(n->right); 
         

@@ -65,7 +65,6 @@ insert(&root);
 insert(&root);
 insert(&root);
 insert(&root);
-insert(&root);
 
 postOrderTraversal(root);
 return 0;
