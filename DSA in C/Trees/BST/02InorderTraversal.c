@@ -45,7 +45,7 @@ struct Node* insert(struct Node* root){
         
       
     }
-    //  free(temp); 
+     
         return root; 
 }
 void inorderTraversal(struct Node* n){
