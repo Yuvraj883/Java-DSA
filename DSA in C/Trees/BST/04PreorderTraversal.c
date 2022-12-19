@@ -40,13 +40,23 @@ struct Node* insert(struct Node* root){
 }
 
 void preorderTraversal(struct Node* n){
-    if(n==NULL){
+    if(n!=NULL){
         // printf("Tree: ");
-        return;
-    }
-    printf("%d ", n->data); 
+           printf("%d ", n->data); 
     preorderTraversal(n->left); 
     preorderTraversal(n->right); 
+        
+    }
+ 
+}
+
+void inorderTraversal(struct Node* n){
+    if(n==NULL){
+        return; 
+    }
+    inorderTraversal(n->left); 
+    printf("%d ", n->data); 
+    inorderTraversal(n->right);
 }
 
 int main(){
@@ -55,7 +65,18 @@ root = insert(root);
 root = insert(root);
 root = insert(root); 
 root = insert(root); 
-root = insert(root); 
+root = insert(root);
+root = insert(root);
+root = insert(root);
+root = insert(root);
+root = insert(root);
+root = insert(root);
+root = insert(root);
+
 printf("Pre-Order Traversal of tree: ");
 preorderTraversal(root);
+printf("\nIn-Order Traversal of tree: ");
+inorderTraversal(root);
+
+
 }
