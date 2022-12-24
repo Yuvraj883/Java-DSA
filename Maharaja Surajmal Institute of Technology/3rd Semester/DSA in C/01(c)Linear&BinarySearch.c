@@ -48,7 +48,6 @@ int compareInt(const void *ptr1, const void* ptr2){
     return *p1-*p2; 
 }
 
-
 int main(){
     int n; 
     printf("Enter the length of array: "); 
