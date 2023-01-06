@@ -1,26 +1,35 @@
-#include <iostream> 
+#include<iostream> 
 using namespace std; 
 
 class Time{
-    int hrs, min; 
-    public: 
-    void operator =(int duration){
-        cout<<"*****Basic to class conversion*****\n";
-        hrs = duration/60; 
-        min = duration%60; 
+    int hr; 
+    int min; 
+
+   public:
+    Time(){
+        hr =0; 
+        min =0;
     }
 
-    void display(){
-        cout<<"Duration in hrs and minutes = "<<hrs<<"hrs and "<<min<<" mins.\n"; 
-    }
+    Time(int duration){
+        cout<<"***Basic to class conversion***"<<endl;
+        hr = duration/60; 
+        min = duration%60;
+     }
+
+     void show(){
+        cout<<hr<<" hr "<<min<<" minutes";
+        cout<<endl;
+     }
+
+     
 };
 
 int main(){
-    int duration;
-    Time t1;  
-    cout<<"Enter duration in minutes: "; 
+    int duration; 
+    cout<<"Enter the duration in minutes: "; 
     cin>>duration; 
-    t1 = duration; 
-    t1.display();
-
+    Time t ;
+    t = duration; 
+    t.show();
 }
