@@ -20,6 +20,7 @@ Time::operator int(){
 }
 
 int main(){	
+    
 	int hour, mins;
 	cout<<"Enter hours and minutes: "; 
     cin>>hour>>mins;
