@@ -1,45 +1,56 @@
 #include <iostream>
 using namespace std;
 
-class Time{
+class Time
+{
+private:
     int hrs, min;
+
 public:
-    Time(int h, int m){
+    Time(int h, int m)
+    {
         hrs = h;
         min = m;
     }
 
-    int getMinutes(){
+    int getMinutes()
+    {
         int tot_min = (hrs * 60) + min;
         return tot_min;
     }
-    void display(){
+    void display()
+    {
         cout << "Hours: " << hrs << "\n";
         cout << "Minutes : " << min << "\n";
     }
 };
 
-class Minute{
+class Minute
+{
     int min;
 
 public:
-    Minute(){
+    Minute()
+    {
         min = 0;
     }
 
-    void operator = (Time T){
+    void operator=(Time T)
+    {
         min = T.getMinutes();
     }
 
-    void display(){
-        cout << "Total Minutes : " << min <<endl;
+    void display()
+    {
+        cout << "Total Minutes : " << min << endl;
     }
 };
 
-int main(){
-    int hour,min; 
-    cout<<"Enter the number of hours and minutes: "; 
-    cin>>hour>>min; 
+int main()
+{
+    int hour, min;
+    cout << "Enter the number of hours and minutes: ";
+    cin >> hour >> min;
     Time t1(hour, min);
     t1.display();
     Minute m1;
