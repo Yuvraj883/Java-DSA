@@ -27,6 +27,5 @@ void printName(fName fn, LName ln){
 int main(){
     fName fn("Yuvraj"); 
     LName ln("Singh");
-   
-    printName(fn,ln);
+       printName(fn,ln);
 }
