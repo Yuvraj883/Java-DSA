@@ -25,4 +25,5 @@ int main(){
     a.setValue();
     B b; 
     b.getValue(a);
+    return 0;
 }
