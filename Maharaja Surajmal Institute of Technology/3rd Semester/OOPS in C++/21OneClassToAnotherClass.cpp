@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Time
-{
+class Time{
 private:
     int hrs, min;
 
@@ -12,7 +11,6 @@ public:
         hrs = h;
         min = m;
     }
-
     int getMinutes()
     {
         int tot_min = (hrs * 60) + min;
