@@ -14,16 +14,17 @@ class Parent{
 class Child: public Parent{
     string name =""; 
     string fullName; 
+    string lastName; 
     public: 
     Child(){
         
         cout<<"What's your first name: "; 
         cin>>name; 
         cout<<"What's your father's last name: "; 
-        cin>>lastName; 
+        cin>>Parent::lastName; 
     }
     void displayName(){
-        fullName=name+" "+lastName; 
+        fullName=name+" "+Parent::lastName; 
         cout<<"Ohh, you must be "<<fullName<<"!!"<<endl;
     }
 }; 

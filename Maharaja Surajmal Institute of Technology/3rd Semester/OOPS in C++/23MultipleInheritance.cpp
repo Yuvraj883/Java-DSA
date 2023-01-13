@@ -8,9 +8,7 @@ class Father{
     Father(){
         cout<<"Constructor of Father Class called."<<endl;
     }
-    
 }; 
-
 class Mother{
     public: 
     string eyes="black"; 
@@ -19,7 +17,6 @@ class Mother{
         cout<<"Constructor of Mother Class called."<<endl;
     }
 };
-
 class Child: public Mother, public Father{
     string eyes = Mother::eyes; 
     float height = Father::height;
@@ -32,12 +29,9 @@ class Child: public Mother, public Father{
         cout<<"Color of Eyes: "<<eyes<<endl;
         cout<<"Height: "<<height<<"ft"<<endl;
     }
-
 };
-
 
 int main(){
     Child c; 
     c.display(); 
-
 }

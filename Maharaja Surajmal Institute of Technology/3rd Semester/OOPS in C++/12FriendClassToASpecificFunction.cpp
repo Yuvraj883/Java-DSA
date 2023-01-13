@@ -15,7 +15,7 @@ class A{
 
 class B{
     public: 
-    void getValue(A &obj){
+    void getValue(A obj){
         cout<<"Value of X is = "<<obj.x<<endl; 
     }
 };
