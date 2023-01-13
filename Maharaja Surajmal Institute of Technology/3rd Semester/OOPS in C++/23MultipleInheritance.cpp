@@ -34,4 +34,5 @@ class Child: public Mother, public Father{
 int main(){
     Child c; 
     c.display(); 
+    return 0;
 }
