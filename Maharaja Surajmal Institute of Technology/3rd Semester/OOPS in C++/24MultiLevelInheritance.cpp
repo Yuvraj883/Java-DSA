@@ -26,7 +26,6 @@ class C: public B{
         cout<<"Grand Child Constructor"<<endl;
         c = a+b; 
     }
-
     void show(){
         cout<<c<<endl;
     }
