@@ -3,7 +3,6 @@ using namespace std;
 class Parent{
     public: 
     string lastName=""; 
-
     Parent(){
     cout<<"<---***Single Inheritance***--->";
     cout<<endl;
