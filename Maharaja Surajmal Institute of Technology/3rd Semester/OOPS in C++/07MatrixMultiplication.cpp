@@ -24,7 +24,7 @@ int main(){
         }
     }
 
-    if(r1!=c2){
+    if(r2!=c1){
         cout<<"Invalid Input!!"<<endl; 
         return 0; 
     }
@@ -38,7 +38,7 @@ int main(){
     
 for(int i=0; i<r1; i++){
     for(int j=0; j<c2; j++){
-        for(int k=0; k<r1; k++){
+        for(int k=0; k<c1; k++){
             c[i][j]+=a[i][k]*b[k][j]; 
         }
     }
