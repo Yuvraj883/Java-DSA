@@ -7,47 +7,67 @@ void printArray(int arr[], int size){
     printf("\n"); 
 }
 
+void printPart(int arr[], int start, int end){
+    for(int i=start; i<end; i++){
+        printf("%d ", arr[i]); 
+    }
+    printf("\n");
+}
+
 
 void mergeArrays(int *arr, int l, int r, int mid){
-    int l_size = mid-l; 
-    int r_size = r-mid-1; 
-    int l_arr[l_size]; 
-    int r_arr[r_size]; 
+   int n1 = mid-l+1; 
+   int n2 = r-mid; 
+   int left[n1]; 
+   int right[n2]; 
+    
+   for(int i=0; i<n1; i++){
+    left[i]=arr[i+l]; 
+   }
 
-    for(int i=0; i<l_size; i++){
-        l_arr[i]=arr[i+l]; 
-    }
-
-    for(int i=0; i<l_size; i++){
-        r_arr[i]=arr[i+mid+1]; 
-    }
-
+   for(int j=0; j<n2; j++){
+    right[j]=arr[j+1+mid]; 
+   }
    
-int li =0, ri = 0, m = 0; 
-while(l<l_size && r<r_size){
-    if(l_arr[li]<r_arr[ri]){
-        arr[m]=l_arr[li]; 
-        li++; 
-        m++; 
+   int i=0, j=0,k=0; 
+   while(i<n1 && j<n2){
+    if(left[i]<right[j]){
+        arr[k]=left[i];
+        i++; 
+        k++;  
     }
     else{
-        arr[m]=r_arr[ri]; 
-        ri++; 
-        m++; 
+        arr[k]=right[j]; 
+        j++; 
+        k++; 
     }
-}
+   }
+
+   while(i<n1){
+    arr[k]=left[i]; 
+    i++; 
+    k++; 
+   }
+    while(j<n2){
+    arr[k]=right[j]; 
+    k++; 
+    j++;
+   }
+
+   
 
 }
 
 void mergeSort(int *arr, int l, int r){
-    if(l==r){
+    if(l>=r){
         return; 
     }
     int mid = (l+r)/2; 
     mergeSort(arr, l, mid);
+    // printPart(arr, l, mid);
     mergeSort(arr, mid+1, r); 
-    mergeArrays(arr,l,r, mid); 
-    // printArray(arr,l+r);
+    // printPart(arr, mid-1, r);
+     mergeArrays(arr,l,r, mid); 
 
 }
 
@@ -61,5 +81,6 @@ int main(){
         scanf("%d",&arr[i]); 
     }
     mergeSort(arr,0,n-1); 
-    printArray(arr,n);
+    printArray(arr,n); 
+    // printArray(arr,n);
 }
