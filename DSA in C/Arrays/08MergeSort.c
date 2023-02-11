@@ -64,7 +64,7 @@ void mergeSort(int *arr, int l, int r){
     }
     int mid = (l+r)/2; 
     mergeSort(arr, l, mid);
-    // printPart(arr, l, mid);
+    printPart(arr, l, mid);
     mergeSort(arr, mid+1, r); 
     // printPart(arr, mid-1, r);
      mergeArrays(arr,l,r, mid); 
