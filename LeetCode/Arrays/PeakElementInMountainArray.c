@@ -11,16 +11,17 @@ int mid = (lo+hi)/2;
 int ans = 0; 
 
 while(lo<=hi){
+    // printf("%d ",arr[mid]); 
     if(arr[mid]>arr[mid-1] && arr[mid]<arr[mid+1]){
-        printf("First case"); 
+        // printf("First case"); 
         lo = mid; 
     }
-    else if(arr[mid]<arr[mid-1]&& arr[mid]>arr[mid]+1){
-        printf("Second Case");
+    else if(arr[mid]<arr[mid-1] && arr[mid]>arr[mid+1]){
+        // printf("Second Case");
         hi = mid; 
     }
     else if(arr[mid]>arr[mid-1] && arr[mid]>arr[mid+1]){
-        printf("Third Case");
+        // printf("Third Case");
          ans = mid;
          return mid; 
         //  break;
