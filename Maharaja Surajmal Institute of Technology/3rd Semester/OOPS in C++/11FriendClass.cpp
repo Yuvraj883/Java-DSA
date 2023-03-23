@@ -1,6 +1,6 @@
 #include <iostream> 
 using namespace std; 
-
+class Class2; 
 class Class1{
     friend class Class2; //The class which is declared as a friend 
                          //to a class can access all of its private, protected and public members. 

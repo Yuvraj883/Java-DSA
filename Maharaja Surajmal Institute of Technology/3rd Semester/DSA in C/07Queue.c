@@ -42,6 +42,9 @@ void dequeue(struct Node** head){
 
 void printQueue(struct Node* head){
     struct Node* n = head; 
+    if(n==NULL){
+        printf("Empty Queue!");
+    }
     while(n!=NULL){
         printf("%d ",n->data); 
         n= n->next;

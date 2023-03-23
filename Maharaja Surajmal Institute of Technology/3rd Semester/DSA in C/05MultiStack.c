@@ -6,7 +6,7 @@ void push1(int *stack, int size, int *top){
         return; 
     }
    int val; 
-   printf("Enter the value you want to insert to the stack: "); 
+   printf("Enter the value you want to insert to the stack1: "); 
    scanf("%d",&val); 
     *top = *top+1; 
     stack[*top] = val; 
@@ -18,7 +18,7 @@ void push2(int *stack, int size, int *top){
         return; 
     }
    int val; 
-   printf("Enter the value you want to insert to the stack: "); 
+   printf("Enter the value you want to insert to the stack2: "); 
    scanf("%d",&val); 
     *top = *top+1; 
     stack[*top] = val; 
