@@ -21,6 +21,7 @@ class Vector{
     }
 
     void display(){
+        cout<<"Elements in the vector are: ";
         for(int j=0; j<i; j++){
             cout<<arr[j]<<" "; 
         }

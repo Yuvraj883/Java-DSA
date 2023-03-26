@@ -8,7 +8,7 @@ class Demo{
         this->x = x;
     }
 
-    void operator++ (int){ //postfix
+    void operator ++ (int){ //postfix
         x+=x; 
     }
       void operator++ (){ //prefix

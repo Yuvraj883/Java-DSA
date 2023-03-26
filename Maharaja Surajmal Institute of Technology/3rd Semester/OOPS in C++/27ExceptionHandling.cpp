@@ -11,7 +11,7 @@ int main(){
             cout<<"You are allowed to consume alcohol."<<endl;
         }
         else{
-            throw age; 
+             throw age; 
         }
     }  
     catch(int age){
