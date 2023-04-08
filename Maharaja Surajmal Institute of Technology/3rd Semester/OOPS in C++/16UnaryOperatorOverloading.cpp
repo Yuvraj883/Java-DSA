@@ -1,13 +1,12 @@
 #include<iostream> 
 using namespace std; 
-
 class Demo{
     int x; 
     public: 
     Demo(int x){
         this->x = x;
     }
-
+//Unary Operator Overloading
     void operator ++ (int){ //postfix
         x+=x; 
     }
