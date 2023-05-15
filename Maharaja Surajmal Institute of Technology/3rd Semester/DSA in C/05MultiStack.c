@@ -99,6 +99,4 @@ int main(){
         
     Display1(stack, top1); 
     Display2(stack, size2,top2); 
-
-    
 }
