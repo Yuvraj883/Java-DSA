@@ -11,17 +11,38 @@
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
-
+       
+        ListNode fast = head; 
+        ListNode slow = head; 
         ListNode current = head; 
-        boolean hasCycle = false; 
 
-        while(current!=null){
-            if(current.val== 999999){
-                return !hasCycle; 
-            }
-            current.val = 999999; 
-            current = current.next; 
+        while(fast!=null && fast.next!=null){
+         
+            slow = slow.next; 
+            fast = fast.next.next;
+
+            if(slow == fast){
+                return true; 
+            } 
         }
-        return hasCycle;
+
+        return false; 
+
+
+
+
+
+
+        // ListNode current = head; 
+        // boolean hasCycle = false; 
+
+        // while(current!=null){
+        //     if(current.val== 999999){
+        //         return !hasCycle; 
+        //     }
+        //     current.val = 999999; 
+        //     current = current.next; 
+        // }
+        // return hasCycle;
     }
 }
